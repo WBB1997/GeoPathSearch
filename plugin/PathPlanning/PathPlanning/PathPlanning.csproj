@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53970E0D-20DB-490A-8BB0-8F8A85EBBED8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PathPlanning</RootNamespace>
+    <AssemblyName>PathPlanning</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\Program Files\MapGIS 10\Program\plugin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MapGIS.GeoDataBase, Version=7.6.0.0, Culture=neutral, PublicKeyToken=1ffc64e70f4d38c4, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MapGIS 10\Program\MapGIS.GeoDataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="MapGIS.GeoMap, Version=7.6.0.0, Culture=neutral, PublicKeyToken=1ffc64e70f4d38c4, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MapGIS 10\Program\MapGIS.GeoMap.dll</HintPath>
+    </Reference>
+    <Reference Include="MapGIS.GeoObjects, Version=7.6.0.0, Culture=neutral, PublicKeyToken=1ffc64e70f4d38c4, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MapGIS 10\Program\MapGIS.GeoObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="MapGIS.GISControl, Version=7.6.0.0, Culture=neutral, PublicKeyToken=1ffc64e70f4d38c4, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MapGIS 10\Program\plugin\MapGIS.GISControl.dll</HintPath>
+    </Reference>
+    <Reference Include="MapGIS.PluginEngine">
+      <HintPath>C:\Program Files\MapGIS 10\Program\plugin\MapGIS.PluginEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="功能\装备管理\VehicleManagementCommand.cs" />
+    <Compile Include="功能\装备管理\VehicleManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="功能\装备管理\VehicleManagementForm.Designer.cs">
+      <DependentUpon>VehicleManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="方法\VehicleModel.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <DependentUpon>Resources.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="功能\装备管理\VehicleManagementForm.resx">
+      <DependentUpon>VehicleManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="工具\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNG_VEC_六驱越野.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNG_VEC_六驱越野.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNG_VEC_四驱越野.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNG_VEC_宿营车.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNG_VEC_越野自卸车.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNG_VEC_运兵车.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PNG_VEC_主战坦克.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\bin\Debug\PathPlanning.exe.config
+C:\Program Files\MapGIS 10\Program\plugin\PathPlanning.dll.config
+C:\Program Files\MapGIS 10\Program\plugin\PathPlanning.dll
+C:\Program Files\MapGIS 10\Program\plugin\PathPlanning.pdb
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\obj\Debug\PathPlanning.Form1.resources
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\obj\Debug\PathPlanning.Properties.Resources.resources
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\obj\Debug\PathPlanning.VehicleManagementForm.resources
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\obj\Debug\PathPlanning.csproj.GenerateResource.Cache
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\obj\Debug\PathPlanning.dll
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\obj\Debug\PathPlanning.pdb
+E:\ProjectsMapGISPlugin\PathPlanning\PathPlanning\obj\Debug\PathPlanning.csprojResolveAssemblyReference.cache

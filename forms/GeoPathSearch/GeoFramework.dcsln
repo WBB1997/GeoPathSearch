@@ -1,0 +1,6 @@
+<solution name="GeoFramework" createtime="2021/5/25 16:38:52" version="1.0.0.0" description="地质地形数据一体化模型与融合技术验证系统">
+  <run>.\GeoIntFramework\GeoIntFramework.dcprj</run>
+  <items>
+    <item path=".\GeoFramework\GeoFramework.dcprj" />
+  </items>
+</solution>

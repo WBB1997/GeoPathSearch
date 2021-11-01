@@ -1,0 +1,478 @@
+<dcprj>
+  <application name="GeoFramework" createtime="2021/5/25 16:38:52" version="1.0.0.0" isribbon="True">
+    <assemblys>
+      <assembly path=".\ToolBox\MapGIS.ToolBox.Plugin.dll" />
+      <assembly path=".\plugin\MapGIS.WorkSpace.Plugin.dll" />
+      <assembly path=".\plugin\MapGIS.GDBManager.Plugin.dll" />
+      <assembly path=".\plugin\MapGIS.MapTile.Plugin.dll" />
+      <assembly path=".\plugin\MapGIS.DataConvert.Plugin.dll" />
+      <assembly path=".\plugin\MapGIS.RasterEditor.Plugin.dll" />
+      <assembly path=".\plugin\MapGIS.DemAnalysis.Plugin.dll" />
+      <assembly path=".\plugin\MapGIS.MapEditor.Plugin.dll" />
+      <assembly path=".\plugin\PathPlanning.dll" />
+    </assemblys>
+    <mainapp guid="fc63c8b7-324f-49f1-a018-5c8834981939" caption="路径规划系统" name="GeoFramework" output=".\" skin="Office 2010 Silver" windowstate="Maximized" windowsize="{Width=1280, Height=720}" description="路径规划系统" menuanimationtype="0" company="中国地质大学（武汉）" productversion="1.0" productname="GeoGIS" trademark="GeoGIS" copyright="2021 CUG.All rights reserved." defaulticon="图标-地球网格-64.ico" remark="路径规划系统">
+    </mainapp>
+    <welcomescreens>
+    </welcomescreens>
+    <ribboncontrol ribbonstyle="Office2010" minimized="False" toolbarlocation="Default" pagecategoryalignment="Right">
+      <ribbonpages>
+        <ribbonpage name="MapGIS.WorkSpace.Plugin.RibbonPageStart" text="通行数据管理" isselected="True">
+          <ribbonpagegroup name="MapGIS.WorkSpace.Plugin.RibbonPageGroupFile" text="文档" showcaptionbutton="False" clickkey="">
+            <item name="MapGIS.WorkSpace.Plugin.CmdCreate" type="command" showlargeimage="True" caption="新建(&amp;N)" hint="新建地图文档" begingroup="False" />
+            <item name="MapGIS.WorkSpace.Plugin.CmdOpen" type="command" showlargeimage="True" caption="打开(&amp;O)" hint="打开地图文档" begingroup="False" />
+            <item name="MapGIS.WorkSpace.Plugin.CmdSave" type="command" showlargeimage="False" caption="保存(&amp;S)" hint="保存地图文档" begingroup="False" />
+            <item name="MapGIS.WorkSpace.Plugin.CmdSaveAs" type="command" showlargeimage="False" caption="另存为(&amp;A)" hint="另存为" begingroup="False" />
+            <item name="MapGIS.WorkSpace.Plugin.CmdClose" type="command" showlargeimage="False" caption="关闭(&amp;C)" hint="关闭地图文档" begingroup="False" />
+          </ribbonpagegroup>
+          <ribbonpagegroup name="MapGIS.WorkSpace.Plugin.RibbonPageGroupMap" text="二维地图" showcaptionbutton="False" clickkey="">
+            <item name="MapGIS.WorkSpace.Plugin.CmdAddMap" type="command" showlargeimage="True" caption="添加地图" hint="添加二维地图" begingroup="False" />
+            <item name="MapGIS.WorkSpace.Plugin.CmdAddLayer" type="command" showlargeimage="False" caption="添加图层" hint="添加图层" begingroup="False" />
+            <item name="MapGIS.WorkSpace.Plugin.CmdAddServerLayer" type="command" showlargeimage="False" caption="添加服务图层" hint="添加服务图层" begingroup="False" />
+          </ribbonpagegroup>
+          <ribbonpagegroup name="MapGIS.WorkSpace.Plugin.RibbonPageGroupCommon" text="地图" showcaptionbutton="False" clickkey="">
+            <item name="2576a8e1-597e-48a7-b372-41e55663b0a6" type="buttongroup" caption="查看操作" hint="" begingroup="False">
+              <item name="MapGIS.WorkSpace.Plugin.ZoomIn" type="command" showlargeimage="False" caption="放大" hint="放大" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.ZoomOut" type="command" showlargeimage="False" caption="缩小" hint="缩小" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.MoveWindow" type="command" showlargeimage="False" caption="移动" hint="移动" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.Restore" type="command" showlargeimage="False" caption="复位" hint="复位" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.PreWindow" type="command" showlargeimage="False" caption="上级窗口" hint="上级窗口" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.OriginalDisplay" type="command" showlargeimage="False" caption="1:1显示" hint="1:1显示" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.CommandEagleEye" type="command" showlargeimage="False" caption="鹰眼" hint="鹰眼" begingroup="False" />
+            </item>
+            <item name="55aec3cf-96ad-4f0c-bd2d-09044c1d9414" type="buttongroup" caption="编辑操作" hint="" begingroup="False">
+              <item name="MapGIS.WorkSpace.Plugin.Undo" type="command" showlargeimage="False" caption="撤销" hint="撤销" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.Redo" type="command" showlargeimage="False" caption="恢复" hint="恢复" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.ClearTool" type="command" showlargeimage="False" caption="清空状态" hint="清空状态" begingroup="False" />
+              <item name="MapGIS.WorkSpace.Plugin.ScaleBar" type="editcombobox" caption="" hint="当前窗口的比例尺" begingroup="False" />
+            </item>
+          </ribbonpagegroup>
+          <ribbonpagegroup name="43d365c2-f400-413d-8330-c9dfaec5852c" text="数据转换" showcaptionbutton="False">
+            <item name="bb758bb2-0021-4a7e-9892-0135f69a6c39" type="subitem" caption="数据导入" begingroup="False" showlargeimage="True" defaulticon="" largedefaulticon="3D图表 28.png">
+              <item name="MapGIS.DataConvert.Plugin.DataImport6xCommand" type="command" caption="MapGIS 6x数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导入MapGIS 6x数据" />
+              <item name="MapGIS.DataConvert.Plugin.DataImportGDBCommand" type="command" caption="MapGIS GDB数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导入MapGIS GDB数据" />
+              <item name="MapGIS.DataConvert.Plugin.DataImportTableCommand" type="command" caption="表格数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导入表格数据" />
+              <item name="MapGIS.DataConvert.Plugin.DataImportOtherCommand" type="command" caption="外部数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导入外部数据" />
+            </item>
+            <item name="25d53f5b-0f1b-45da-bac9-7578b5c8fa19" type="subitem" caption="数据导出" begingroup="False" showlargeimage="True" defaulticon="" largedefaulticon="3D物体 44.png">
+              <item name="MapGIS.DataConvert.Plugin.DataExport6xCommand" type="command" caption="MapGIS 6x数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导出MapGIS 6x数据" />
+              <item name="MapGIS.DataConvert.Plugin.DataExportGDBCommand" type="command" caption="MapGIS GDB数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导出MapGIS GDB数据" />
+              <item name="MapGIS.DataConvert.Plugin.DataExportTableCommand" type="command" caption="表格数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导出表格数据" />
+              <item name="MapGIS.DataConvert.Plugin.DataExportOtherCommand" type="command" caption="外部数据" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="导出外部数据" />
+            </item>
+            <item name="532d8aff-1f3e-446b-828c-1065b5dc0e7a" type="subitem" caption="新下拉项" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="">
+              <item name="MapGIS.RasterEditor.Plugin.VectorToRasCommand" type="command" caption="矢量转栅格(点、线、面)" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="矢量转栅格" />
+              <item name="MapGIS.RasterEditor.Plugin.RasToVectorCommand" type="command" caption="栅格转矢量(点、线、面)" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="" />
+            </item>
+            <item name="07adb871-feee-4d6e-b744-e899cc0acd93" type="subitem" caption="投影转换" begingroup="False" showlargeimage="True" defaulticon="" largedefaulticon="合作、组织关系，拼图，商务 170.png">
+              <item name="MapGIS.MapEditor.Plugin.SimplePntProjectCalss" type="command" caption="单点投影" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="单点投影" />
+              <item name="MapGIS.MapEditor.Plugin.MutiClsProjectClass" type="command" caption="批量投影" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="批量投影" />
+              <item name="MapGIS.MapEditor.Plugin.ElpTransCommand" type="command" caption="地理转换参数设置" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="地理转换参数设置" />
+            </item>
+          </ribbonpagegroup>
+          <ribbonpagegroup name="06bd1c57-b8db-444d-bfab-9efa9878d04c" text="数据重采样" showcaptionbutton="False">
+            <item name="MapGIS.RasterEditor.Plugin.RsDataSetResampleCommand" type="command" caption="栅格重采样" begingroup="False" showlargeimage="True" defaulticon="" largedefaulticon="" hint="栅格重采样" />
+          </ribbonpagegroup>
+        </ribbonpage>
+        <ribbonpage name="5171fe5d-b1cc-4992-9ca4-c0cece3e2e5f" text="路径规划">
+          <ribbonpagegroup name="53dab205-c68c-4313-8e54-2be0d095dcfd" text="数据分析" showcaptionbutton="False">
+            <item name="PathPlanning.VehicleManagementCommand" type="command" caption="装备管理" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="装备管理" />
+            <item name="PathPlanning.功能.通行环境分析.EnvironmentalAnalysisCommand" type="command" caption="通行环境分析" begingroup="False" showlargeimage="False" defaulticon="" largedefaulticon="" hint="装备管理" />
+          </ribbonpagegroup>
+          <ribbonpagegroup name="a420caa0-970f-476c-b546-92ab9c258c87" text="路径规划" showcaptionbutton="False">
+            <item name="MapGIS.DemAnalysis.Plugin.PathAnalyzeCommanad" type="command" caption="路径分析" begingroup="False" showlargeimage="True" defaulticon="" largedefaulticon="创建图形 4.png" hint="路径分析" />
+            <item name="7a4f5b9f-8576-4e0b-841c-eb4cc0d8a127" type="command" caption="轨迹漫游" begingroup="False" showlargeimage="True" defaulticon="" largedefaulticon="地球，环保，绿色 162.png" />
+          </ribbonpagegroup>
+        </ribbonpage>
+        <ribbonpage name="MapGIS.WorkSpace.Plugin.RibbonPageTools" text="地图制图" isselected="False">
+          <ribbonpagegroup name="MapGIS.DataConvert.Plugin.RPGDataConvert" text="地图整饰" showcaptionbutton="False" clickkey="">
+          </ribbonpagegroup>
+          <ribbonpagegroup name="e6efc9de-1dc4-4678-a6e6-c7f4bea2218a" text="地图输出" showcaptionbutton="False" />
+        </ribbonpage>
+      </ribbonpages>
+      <ribbonpagecategories>
+        <ribbonpagecategory name="MapGIS.MapEditor.Plugin.RibbonPageCategoryEdit" text="地图编辑" visible="True" color="-1588739" condition="" attachcontentsviewkey="MapGIS.WorkSpace.Plugin.MapView">
+          <ribbonpage name="MapGIS.MapEditor.Plugin.RibbonPagePntAndAnnEdit" text="点编辑" isselected="False">
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupPntSelect" text="选择点/注记" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.SelectPnt" type="command" showlargeimage="True" caption="选择子图(&amp;S)" hint="选择点" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.SelectAnn" type="command" showlargeimage="True" caption="选择注记(&amp;N)" hint="选择注记" begingroup="False" />
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupInputPntAndAnn" text="输入点/注记" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.InputPntDefault" type="command" showlargeimage="True" caption="造子图(参数缺省)(&amp;D)" hint="造子图(参数缺省)" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.InputPntParam" type="command" showlargeimage="False" caption="造子图(参数输入)(&amp;I)" hint="造子图(参数输入)" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.InputPntUnion" type="command" showlargeimage="False" caption="造组合点(子图)(&amp;M)" hint="造组合点(子图)" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.InputPntOnline" type="command" showlargeimage="False" caption="沿线布点(子图)(&amp;P)" hint="沿线布点(子图)" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.InputAnnoDef" type="command" showlargeimage="True" caption="造文本注记(&amp;D)" hint="造注记(参数缺省)" begingroup="True" />
+              <item name="MapGIS.MapEditor.Plugin.InputLayoutAnno" type="command" showlargeimage="False" caption="造版面注记(&amp;L)" hint="造版面注记" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.InputPictureAnno" type="command" showlargeimage="False" caption="造图片注记(&amp;P)" hint="造图片注记" begingroup="False" />
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupPntAndAnnEdit" text="编辑点/注记" showcaptionbutton="False" clickkey="">
+              <item name="05c68be5-b7a3-4084-a6a7-0b87e1d63706" type="buttongroup" caption="修改点" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.ModifyPntParam" type="command" showlargeimage="False" caption="修改子图参数(&amp;P)" hint="修改子图参数" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ModifyPntAttribute" type="command" showlargeimage="False" caption="修改子图属性(&amp;A)" hint="修改子图属性" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.PntToAnn" type="command" showlargeimage="False" caption="根据点属性生成注记(&amp;G)" hint="根据点属性生成注记" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.DeletePnt" type="command" showlargeimage="False" caption="删除点/注记(&amp;D)" hint="删除点" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.MovePnt" type="command" showlargeimage="False" caption="移动点/注记(&amp;M)" hint="移动点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CopyPnt" type="command" showlargeimage="False" caption="复制点/注记(&amp;C)" hint="复制点/注记" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AlignPntAndAnn" type="command" showlargeimage="False" caption="对齐坐标(&amp;A)" hint="垂直方向左对齐" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.RoatePnt" type="command" showlargeimage="False" caption="修改角度(&amp;Y)" hint="修改角度" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ClearReptPnt" type="command" showlargeimage="False" caption="清除重复点/注记(&amp;R)" hint="清除重复点" begingroup="False" />
+              </item>
+              <item name="f87c3cab-d74c-4939-bf70-f1fae83c6d74" type="buttongroup" caption="修改注记" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.ModifyAnnParam" type="command" showlargeimage="False" caption="修改注记参数(&amp;P)" hint="修改注记参数" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ModifyAnnAtt" type="command" showlargeimage="False" caption="修改注记属性(&amp;A)" hint="修改注记属性" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ModifyString" type="command" showlargeimage="False" caption="修改字串(&amp;R)" hint="修改字串" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.FindAndReplaceAnnText" type="command" showlargeimage="False" caption="字串查找和替换(&amp;F)" hint="字串查找和替换" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CutString" type="command" showlargeimage="False" caption="剪断字串(&amp;B)" hint="剪断字串" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.LinkString" type="command" showlargeimage="False" caption="连接字串(&amp;L)" hint="连接字串" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AnnoToAttr" type="command" showlargeimage="False" caption="注记赋为属性(&amp;E)" hint="注记赋为属性" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.AnnToLayer" type="command" showlargeimage="False" caption="根据注记生成点图层(&amp;G)" hint="根据注记生成点图层" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupPntAndAnnLayerEdit" text="层编辑" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.ModifyLayerName" type="command" showlargeimage="True" caption="修改层名(&amp;M)" hint="修改层名" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.ReplacePntAnnLayerNo$e651452c-27ea-49c2-a4ba-657be3788e4e" type="subitem" caption="替换点/注记" hint="替换点/注记" begingroup="True">
+                <item name="MapGIS.MapEditor.Plugin.ReplacePntLayerNo" type="command" showlargeimage="False" caption="替换点(&amp;P)" hint="替换点层号" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ReplaceAnnLayerNo" type="command" showlargeimage="False" caption="替换注记(&amp;A)" hint="替换注记层号" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.UpdatePntAnnLayerNo$e81abc9e-6a42-454f-a592-ac9f069c04ae" type="subitem" caption="修改点/注记" hint="修改点/注记" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.UpdatePntLayerNo" type="command" showlargeimage="False" caption="修改点(&amp;P)" hint="修改点层号" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.UpdateAnnLayerNo" type="command" showlargeimage="False" caption="修改注记(&amp;A)" hint="修改注记层号" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.SaveCurPntAnnLayer$d241c96e-8456-4abf-92d7-bc0a8f5e36ac" type="subitem" caption="保存点/注记" hint="保存点/注记" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.SaveCurPntLayer" type="command" showlargeimage="False" caption="保存点(&amp;P)" hint="保存当前层点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SaveCurAnnLayer" type="command" showlargeimage="False" caption="保存注记(&amp;A)" hint="保存当前层注记" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.DelCurPntAnnLayer$d239ac90-a9cc-413b-b9e6-517360ef1664" type="subitem" caption="删除点/注记" hint="删除点/注记" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.DelCurPntLayer" type="command" showlargeimage="False" caption="删除点(&amp;P)" hint="删除当前层点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.DelCurAnnLayer" type="command" showlargeimage="False" caption="删除注记(&amp;A)" hint="删除当前层注记" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.TurnOnOffPntAnnLayer$742309cd-4284-4293-99cb-54cf4d69c4ed" type="subitem" caption="改点/注记开关" hint="改点/注记开关" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.TurnOnOffPntLayer" type="command" showlargeimage="False" caption="改点开关(&amp;P)" hint="改层开关点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.TurnOnOffAnnLayer" type="command" showlargeimage="False" caption="改注记开关(&amp;A)" hint="改层开关注记" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.SetCurPntAnnLayerNo$ff870010-8be7-449b-b15e-8122bd22e7fd" type="subitem" caption="改当前点/注记" hint="改当前点/注记" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.SetCurPntLayerNo" type="command" showlargeimage="False" caption="改当前点层(&amp;P)" hint="修改点当前层" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SetCurAnnLayerNo" type="command" showlargeimage="False" caption="改当前注记层(&amp;A)" hint="修改注记当前层" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+          </ribbonpage>
+          <ribbonpage name="MapGIS.MapEditor.Plugin.RibbonPageLinEdit" text="线编辑" isselected="False">
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupLinSelect" text="选择线" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.SelectLin" type="command" showlargeimage="True" caption="选择线(&amp;S)" hint="选择线" begingroup="False" />
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupLinInput" text="输入线" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.GalleryInputLine" type="gallery" caption="输入线" hint="输入线" begingroup="False" />
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupLinBaseEdit" text="编辑线" showcaptionbutton="False" clickkey="">
+              <item name="b92c7fa0-9335-4a6c-843e-ff7d5914c998" type="buttongroup" caption="线编辑1" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.ModifyLineParam" type="command" showlargeimage="False" caption="修改线参数(&amp;P)" hint="修改线参数" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ModifyLineAttribute" type="command" showlargeimage="False" caption="修改线属性(&amp;A)" hint="修改线属性" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.DeleteLine" type="command" showlargeimage="False" caption="删除线(&amp;L)" hint="删除线" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.MoveLine" type="command" showlargeimage="False" caption="移动线(&amp;M)" hint="移动线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CopyLine" type="command" showlargeimage="False" caption="复制线(&amp;C)" hint="复制线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AbstractLine" type="command" showlargeimage="False" caption="抽稀线(&amp;R)" hint="抽稀线" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.SmoothLine" type="command" showlargeimage="False" caption="光滑线(&amp;H)" hint="光滑线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ChangeLine" type="command" showlargeimage="False" caption="变换线(&amp;T)" hint="变换线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.RotateLine" type="command" showlargeimage="False" caption="旋转线(&amp;R)" hint="旋转线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ChangeDirection" type="command" showlargeimage="False" caption="改线方向(&amp;C)" hint="改线方向" begingroup="True" />
+              </item>
+              <item name="cab37bda-bb23-4fa4-9bdb-056067b538aa" type="buttongroup" caption="线编辑2" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.AddPointOnLine" type="command" showlargeimage="False" caption="线上加点(&amp;A)" hint="线上加点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.DeletePointOnLine" type="command" showlargeimage="False" caption="线上删点(&amp;E)" hint="线上删点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.MovePointOnLine" type="command" showlargeimage="False" caption="线上移点(&amp;V)" hint="线上移点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ProlongOrShorten" type="command" showlargeimage="False" caption="延长线(F9缩短线)" hint="延长线(F9缩短线)" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.NearLineDef" type="command" showlargeimage="False" caption="靠近线(&amp;N)" hint="靠近线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.NearLineAPnt" type="command" showlargeimage="False" caption="靠近线(母线加点)(&amp;A)" hint="靠近线(母线加点)" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.BluntAngle" type="command" showlargeimage="False" caption="钝化拐角(&amp;B)" hint="钝化拐角" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.BluntLineAngle" type="command" showlargeimage="False" caption="钝化线(倒角)(&amp;N)" hint="钝化线(倒角)" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.JoinLine" type="command" showlargeimage="False" caption="连接线(&amp;L)" hint="连接线" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.NodeConcent" type="command" showlargeimage="False" caption="线结点平差(&amp;O)" hint="线结点平差" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.LineToReg" type="command" showlargeimage="False" caption="线拓扑造区(&amp;G)" hint="线拓扑造区" begingroup="True" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.CutLineSubItem$560880ed-67ea-43e3-8238-ac803bd4196a" type="subitem" caption="剪断线" hint="剪断线" begingroup="True">
+                <item name="MapGIS.MapEditor.Plugin.CutLine" type="command" showlargeimage="False" caption="有剪断点(&amp;H)" hint="有剪断点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CutLineAdv" type="command" showlargeimage="False" caption="无剪断点(&amp;N)" hint="无剪断点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CutLineRatio" type="command" showlargeimage="False" caption="剪断一条线(中点、分段、距离)(&amp;C)" hint="剪断一条线(中点、分段、距离)" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.MyBmpCutIntersect$2c95e368-7460-4919-a9a6-b1be4a9ca47e" type="subitem" caption="相交剪断" hint="相交剪断" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.CutIntsectLine" type="command" showlargeimage="False" caption="剪断母线(&amp;C)" hint="剪断母线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CutIntsectLineRM" type="command" showlargeimage="False" caption="不剪断母线(&amp;N)" hint="不剪断母线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CutIntsectLineAuto" type="command" showlargeimage="False" caption="全图自动剪断(&amp;E)" hint="全图自动剪断" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.MyBmpTopoProcess$924e9883-68ad-4f32-b1d7-12a19b7bada4" type="subitem" caption="拓扑处理" hint="拓扑处理" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.LineTopError" type="command" showlargeimage="False" caption="线拓扑查错(&amp;L)" hint="线拓扑查错" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ClearShortLine" type="command" showlargeimage="False" caption="清除微短线(&amp;R)" hint="清除微短线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ClearOverlayLine" type="command" showlargeimage="False" caption="清除重叠线(&amp;D)" hint="清除重叠线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CleatSelfCross" type="command" showlargeimage="False" caption="清除重叠坐标及自相交剪断(&amp;C)" hint="清除重叠坐标及自相交剪断" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ClearCutByMouse" type="command" showlargeimage="False" caption="清除重叠坐标及自相交剪断(鼠标拾取)(&amp;S)" hint="清除重叠坐标及自相交剪断(鼠标拾取)" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupLinLayerEdit" text="层编辑" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.ModifyLayerName" type="command" showlargeimage="True" caption="修改层名(&amp;M)" hint="修改层名" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.ReplaceLinLayerNo" type="command" showlargeimage="False" caption="替换线(&amp;L)" hint="替换线层号" begingroup="True" />
+              <item name="MapGIS.MapEditor.Plugin.UpdateLinLayerNo" type="command" showlargeimage="False" caption="修改线(&amp;L)" hint="修改线层号" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.SaveCurLinLayer" type="command" showlargeimage="False" caption="保存线(&amp;L)" hint="保存当前层线" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.DelCurLinLayer" type="command" showlargeimage="False" caption="删除线(&amp;L)" hint="删除当前层线" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.TurnOnOffLinLayer" type="command" showlargeimage="False" caption="改线开关(&amp;L)" hint="改层开关线" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.SetCurLinLayerNo" type="command" showlargeimage="False" caption="改当前线层(&amp;L)" hint="修改线当前层" begingroup="False" />
+            </ribbonpagegroup>
+          </ribbonpage>
+          <ribbonpage name="MapGIS.MapEditor.Plugin.RibbonPageRegEdit" text="区编辑" isselected="False">
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupRegSelect" text="选择区" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.SelectReg" type="command" showlargeimage="True" caption="选择区(&amp;S)" hint="选择区" begingroup="False" />
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupRegInput" text="输入区" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.GalleryInputRegion" type="gallery" caption="输入区" hint="输入区" begingroup="False" />
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupRegBaseEdit" text="编辑区" showcaptionbutton="False" clickkey="">
+              <item name="e900d793-8bb7-4aea-9ef1-aa387be3669b" type="buttongroup" caption="区编辑" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.EditRegParam" type="command" showlargeimage="False" caption="修改区参数(&amp;P)" hint="修改区参数" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.EditRegAtt" type="command" showlargeimage="False" caption="修改区属性(&amp;A)" hint="修改区属性" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.DeleteReg" type="command" showlargeimage="False" caption="删除区(&amp;R)" hint="删除区" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.MoveReg" type="command" showlargeimage="False" caption="移动区(&amp;M)" hint="移动区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CopyReg" type="command" showlargeimage="False" caption="复制区(&amp;C)" hint="复制区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ZoomFeature" type="command" showlargeimage="False" caption="变换区(&amp;C)" hint="变换区" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.RotateFeature" type="command" showlargeimage="False" caption="旋转区(&amp;R)" hint="旋转区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ArcToLine" type="command" showlargeimage="False" caption="区边界转线(&amp;T)" hint="区边界转线" begingroup="True" />
+              </item>
+              <item name="8ca04df5-e202-4bd5-b26c-33fed7ff7b93" type="buttongroup" caption="区边界编辑" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.AddPointOnLine1" type="command" showlargeimage="False" caption="区边界加点(&amp;A)" hint="区边界加点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.DeletePointOnLine1" type="command" showlargeimage="False" caption="区边界删点(&amp;E)" hint="区边界删点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.MovePointOnLine1" type="command" showlargeimage="False" caption="区边界移点(&amp;V)" hint="区边界移点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SmoothLine1" type="command" showlargeimage="False" caption="区边界光滑(&amp;H)" hint="区边界光滑" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.AbstractLine1" type="command" showlargeimage="False" caption="区边界抽稀(&amp;Y)" hint="区边界抽稀" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.WholeSparse" type="command" showlargeimage="False" caption="整区抽稀" hint="整区抽稀" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.RegSplitByLin" type="command" showlargeimage="False" caption="画线分割区(&amp;N)" hint="画线分割区" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.RegSplit" type="command" showlargeimage="False" caption="用线分割区(&amp;L)" hint="用线分割区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.RegUnion" type="command" showlargeimage="False" caption="合并区(&amp;R)" hint="合并区" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.CollectionSubItem$41c59c22-619d-40ce-bfdf-96ea37252203" type="subitem" caption="叠置运算" hint="叠置运算" showlargeimage="True" begingroup="True">
+                <item name="MapGIS.MapEditor.Plugin.CollectionOfUnion" type="command" showlargeimage="False" caption="求并(&amp;U)" hint="求并" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CollectionOfInter" type="command" showlargeimage="False" caption="求交(&amp;I)" hint="求交" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.OppCollOfInter" type="command" showlargeimage="False" caption="交集求反(&amp;O)" hint="交集求反" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Wipe" type="command" showlargeimage="False" caption="擦除(&amp;W)" hint="擦除" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.WipeOutside" type="command" showlargeimage="False" caption="擦除外部(&amp;P)" hint="擦除外部" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.AutoSearchChildReg$34ebbc9a-eac5-403a-940b-a77aa115e138" type="subitem" showlargeimage="True" caption="自动搜子区(&amp;B)" hint="自动搜子区" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.AutoSearchChildReg" type="command" showlargeimage="False" caption="自动搜子区(&amp;B)" hint="自动搜子区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.HandSearchChildReg" type="command" showlargeimage="False" caption="手动挑子区(&amp;K)" hint="手动挑子区" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.TopReg" type="command" showlargeimage="False" caption="拓扑重建(&amp;T)" hint="拓扑重建" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.RegTopError" type="command" showlargeimage="False" caption="区拓扑查错" hint="区拓扑查错" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.EditRegLabel$17a6ac34-058d-48c2-9d00-0bc7007d47d7" type="subitem" showlargeimage="False" caption="创建Label点(&amp;C)" hint="创建Label点" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.EditRegLabel" type="command" showlargeimage="False" caption="创建Label点(&amp;C)" hint="创建Label点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.RegLabelCombine" type="command" showlargeimage="False" caption="Label点归并(&amp;L)" hint="Label点归并" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupRegLayerEdit" text="层编辑" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.ModifyLayerName" type="command" showlargeimage="True" caption="修改层名(&amp;M)" hint="修改层名" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.ReplaceRegLayerNo" type="command" showlargeimage="False" caption="替换区(&amp;R)" hint="替换区层号" begingroup="True" />
+              <item name="MapGIS.MapEditor.Plugin.UpdateRegLayerNo" type="command" showlargeimage="False" caption="修改区(&amp;R)" hint="修改区层号" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.SaveCurRegLayer" type="command" showlargeimage="False" caption="保存区(&amp;R)" hint="保存当前层区" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.DelCurRegLayer" type="command" showlargeimage="False" caption="删除区(&amp;R)" hint="删除当前层区" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.TurnOnOffRegLayer" type="command" showlargeimage="False" caption="改区开关(&amp;R)" hint="改层开关区" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.SetCurRegLayerNo" type="command" showlargeimage="False" caption="改当前区层(&amp;R)" hint="修改区当前层" begingroup="False" />
+            </ribbonpagegroup>
+          </ribbonpage>
+          <ribbonpage name="MapGIS.MapEditor.Plugin.RibbonPageStart" text="通用编辑" isselected="True">
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupSelect" text="选择图元" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.Select0$15d4c080-677c-47b0-acee-dfe5cbecbb14" type="subitem" showlargeimage="True" caption="拉框选择(&amp;M)" hint="拉框选择" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.Select0" type="command" showlargeimage="False" caption="拉框选择(&amp;M)" hint="拉框选择" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Select1" type="command" showlargeimage="False" caption="圆选择(&amp;S)" hint="圆选择" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Select2" type="command" showlargeimage="False" caption="多边形选择(&amp;P)" hint="多边形选择" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Select3" type="command" showlargeimage="False" caption="按属性选择(&amp;S)" hint="按属性选择" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupBaseEdit" text="常用工具" showcaptionbutton="False" clickkey="">
+              <item name="9afff484-f5e0-47bf-b3f1-77341a9bb1c8" type="buttongroup" caption="常用编辑1" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.ParamModify" type="command" showlargeimage="False" caption="修改图元参数(&amp;P)" hint="修改图元参数" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AttributeModify" type="command" showlargeimage="False" caption="修改图元属性(&amp;A)" hint="修改图元属性" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CmdViewFieldValue" type="command" showlargeimage="False" caption="查看图元属性(&amp;V)" hint="查看图元属性" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Transfer$9cf561d2-cc71-4088-b4f7-94c94e601617" type="subitem" caption="参数属性互转" hint="参数属性互转" begingroup="False">
+                  <item name="MapGIS.MapEditor.Plugin.AttToInfo" type="command" showlargeimage="False" caption="属性赋为参数(&amp;A)" hint="属性赋为参数" begingroup="False" />
+                  <item name="MapGIS.MapEditor.Plugin.InfoToAtt" type="command" showlargeimage="False" caption="参数赋为属性(&amp;I)" hint="参数赋为属性" begingroup="False" />
+                </item>
+                <item name="MapGIS.MapEditor.Plugin.Delete" type="command" showlargeimage="False" caption="删除图元(&amp;D)" hint="删除图元" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.FormatBrush" type="command" showlargeimage="False" caption="格式刷(&amp;F)" hint="格式刷" begingroup="False" />
+              </item>
+              <item name="4d3bb9a0-048c-4c5c-9a96-e20637aa58b7" type="buttongroup" caption="常用编辑2" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.Move" type="command" showlargeimage="False" caption="移动图元(&amp;M)" hint="移动图元" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SequenCopy" type="command" showlargeimage="False" caption="复制图元(&amp;C)" hint="复制图元" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ArrayCopy" type="command" showlargeimage="False" caption="阵列复制(&amp;R)" hint="阵列复制" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Cut" type="command" showlargeimage="False" caption="剪切图元(&amp;U)" hint="剪切图元" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.Copy" type="command" showlargeimage="False" caption="拷贝图元(&amp;C)" hint="拷贝图元" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Paste" type="command" showlargeimage="False" caption="粘贴图元(&amp;P)" hint="粘贴图元" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupExtEdit" text="扩展编辑" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.MyBmp03$de915869-769f-4d49-bc70-e23a4f7ffc6d" type="subitem" caption="图元镜像" hint="图元镜像" showlargeimage="True" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.OriginMiirror" type="command" showlargeimage="False" caption="原点镜像(&amp;O)" hint="原点镜像" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SymmetryMirror" type="command" showlargeimage="False" caption="对称轴镜像(&amp;S)" hint="对称轴镜像" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.MyBmp02$201dc952-c872-4998-8526-2bbea6655544" type="subitem" caption="整图变换" hint="整图变换" showlargeimage="True" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.MouseMapCov" type="command" showlargeimage="False" caption="整图变换(鼠标定义)(&amp;M)" hint="整图变换(鼠标定义)" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.KeybordMapCov" type="command" showlargeimage="False" caption="整图变换(键盘输入)(&amp;K)" hint="整图变换(键盘输入)" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.MyBmp01$254c958c-c9be-454f-91e4-9c4975739a11" type="subitem" caption="量算工具" hint="量算工具" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.DisMeasure" type="command" showlargeimage="False" caption="距离量算(&amp;D)" hint="距离量算" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.MeasureAngle" type="command" showlargeimage="False" caption="角度量算(&amp;A)" hint="角度量算" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.MeasureArea" type="command" showlargeimage="False" caption="面积量算(&amp;M)" hint="面积量算" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.MeasureElement" type="command" showlargeimage="False" caption="图元量算(&amp;E)" hint="图元量算" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.MyBmp04$9d79ac27-fee0-44cc-98d4-06531b8408d6" type="subitem" caption="高级工具" hint="高级工具" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.Combinate" type="command" showlargeimage="False" caption="组合要素(&amp;C)" hint="组合要素" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Decompose" type="command" showlargeimage="False" caption="分解要素(&amp;S)" hint="分解要素" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.Common6" type="command" showlargeimage="False" caption="按接边条接边(&amp;T)" hint="按接边条接边" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.JoinEdgeCmd" type="command" showlargeimage="False" caption="图幅接边" hint="图幅接边" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupSpatialAnalysis" text="空间分析" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.MyBmpClipTools$f764bcc3-03cd-4f13-bd3a-1b8aea4be6bf" type="subitem" caption="裁剪" hint="裁剪" showlargeimage="True" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.MultiPolygonCls" type="command" showlargeimage="False" caption="多边形裁剪(&amp;P)" hint="多边形裁剪" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.RegFileClip" type="command" showlargeimage="False" caption="区文件裁剪(&amp;F)" hint="区文件裁剪" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.StdFrmClip" type="command" showlargeimage="False" caption="标准图幅裁剪(&amp;S)" hint="标准图幅裁剪" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.ProjectClip" type="command" showlargeimage="False" caption="工程裁剪(&amp;Q)" hint="工程裁剪" begingroup="True" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.SpatialQuery$fd05ecf3-0f0c-4b05-95af-ccfcf8ca910b" type="subitem" showlargeimage="False" caption="空间查询(&amp;Q)" hint="空间查询" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.SpatialQuery" type="command" showlargeimage="False" caption="空间查询(&amp;Q)" hint="空间查询" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.ExtractFeature" type="command" showlargeimage="False" caption="交互式空间查询(&amp;T)" hint="交互式空间查询" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.SpatialAnalyse" type="command" showlargeimage="False" caption="叠加分析(&amp;O)" hint="叠加分析" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.MyBmpMergeTools$bc982673-6b38-4b37-98a5-cbf2af443b71" type="subitem" caption="融合图元" hint="融合图元" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.Merge" type="command" showlargeimage="False" caption="融合区(&amp;U)" hint="融合区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.LinkLine" type="command" showlargeimage="False" caption="连接线(&amp;L)" hint="连接线" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.MyBmpBufferTools$d199da6d-9b76-437d-9bed-5504a9cdde86" type="subitem" caption="缓冲分析" hint="缓冲分析" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.BufferAnalyse" type="command" showlargeimage="False" caption="缓冲分析(&amp;B)" hint="缓冲分析" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.MultipleRingBufferAnalyse" type="command" showlargeimage="False" caption="多重缓冲分析(&amp;M)" hint="多重缓冲分析" begingroup="False" />
+              </item>
+              <item name="MapGIS.MapEditor.Plugin.MyBmp05$b220284a-097c-48d2-b8a5-0c0410937667" type="subitem" caption="拓扑检查" hint="拓扑检查" showlargeimage="True" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.TopoCheck" type="command" showlargeimage="False" caption="拓扑检查" hint="拓扑检查" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.TopoErroeResults" type="command" showlargeimage="False" caption="拓扑错误管理" hint="拓扑错误管理" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupAssist" text="辅助工具" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.CheckOutputCommand" type="command" showlargeimage="False" caption="查看输出" hint="查看输出" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.EditToolBoxCommand" type="command" showlargeimage="False" caption="编辑工具箱(&amp;T)" hint="编辑工具箱" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.CmdVectorLayerDisplay" type="command" showlargeimage="False" caption="图层显示控制" hint="矢量图层显示控制" begingroup="False" />
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupBookMark" text="书签" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.CmdBookMarkManage$bee04445-ab82-474c-aa3c-591625d481b7" type="subitem" showlargeimage="True" caption="书签管理" hint="管理地图书签" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.CmdBookMarkManage" type="command" showlargeimage="False" caption="书签管理" hint="管理地图书签" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.CmdBookMarkAdd" type="command" showlargeimage="False" caption="添加书签" hint="添加书签" begingroup="True" />
+                <item name="MapGIS.MapEditor.Plugin.CmdBookMarkAdd2" type="command" showlargeimage="False" caption="添加书签(交互)" hint="添加书签(交互)" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupSnap" text="捕捉" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.EnableSnap" type="command" showlargeimage="True" caption="开启捕捉" hint="开启捕捉" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.SnapOption" type="command" showlargeimage="True" caption="捕捉设置" hint="捕捉设置" begingroup="False" />
+              <item name="0df41723-a954-4254-9fc4-7662d3083335" type="buttongroup" caption="捕捉点1" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.SnapIntersect" type="command" showlargeimage="False" caption="捕捉交点" hint="捕捉交点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SnapEnd" type="command" showlargeimage="False" caption="捕捉端点" hint="捕捉端点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SnapMid" type="command" showlargeimage="False" caption="捕捉中点" hint="捕捉中点" begingroup="True" />
+              </item>
+              <item name="45559a84-9f8a-43c3-8153-6eb1f1943911" type="buttongroup" caption="捕捉点2" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.SnapCoord" type="command" showlargeimage="False" caption="捕捉拐点" hint="捕捉拐点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SnapVertical" type="command" showlargeimage="False" caption="捕捉垂点" hint="捕捉垂点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.SnapNear" type="command" showlargeimage="False" caption="捕捉线上点" hint="捕捉线上点" begingroup="True" />
+              </item>
+            </ribbonpagegroup>
+          </ribbonpage>
+          <ribbonpage name="MapGIS.MapEditor.Plugin.DataEditPage" text="制图编辑" isselected="False">
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupElement" text="输入" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.GDSelect" type="command" showlargeimage="True" caption="选择元素" hint="选择制图元素" begingroup="False" />
+              <item name="997cc22b-96b8-434d-a34a-412a49788663" type="buttongroup" caption="Edit1" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.AddPnt" type="command" showlargeimage="False" caption="点" hint="点" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AddRandomLine" type="command" showlargeimage="False" caption="折线" hint="折线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AddRectangleLine" type="command" showlargeimage="False" caption="矩形" hint="矩形" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AddArcLine" type="command" showlargeimage="False" caption="弧线" hint="弧线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AddCircleLine" type="command" showlargeimage="False" caption="圆" hint="圆" begingroup="False" />
+              </item>
+              <item name="b67ae334-fbe2-4db6-9176-5bf54b03fd25" type="buttongroup" caption="Edit2" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.AddRandomReg" type="command" showlargeimage="False" caption="任意区" hint="任意区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AddRectangleReg" type="command" showlargeimage="False" caption="矩形区" hint="矩形区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AddCircleReg" type="command" showlargeimage="False" caption="圆形区" hint="圆形区" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.AddAnn" type="command" showlargeimage="False" caption="文本" hint="文本" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupLayoutEdit" text="编辑" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.EditGeomInfo" type="command" showlargeimage="True" caption="图形参数" hint="编辑图形参数" begingroup="False" />
+              <item name="e15a8836-3bd9-4e97-9ee6-256a188f06eb" type="buttongroup" caption="Edit1" hint="" begingroup="True">
+                <item name="MapGIS.MapEditor.Plugin.GDFontBar" type="editcombobox" caption="字体" hint="注记字体" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.GDFontSizeBar" type="editcombobox" caption="字号" hint="注记字号" begingroup="False" />
+              </item>
+              <item name="ce1e66ee-0b43-440e-b080-e8013178b1f1" type="buttongroup" caption="Edit2" hint="" begingroup="False">
+                <item name="MapGIS.MapEditor.Plugin.GDBoldFont" type="command" showlargeimage="False" caption="加粗" hint="加粗" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.GDItalicFont" type="command" showlargeimage="False" caption="斜体" hint="斜体" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.GDUnderlineFont" type="command" showlargeimage="False" caption="下划线" hint="下划线" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.GDPntEditor" type="dropdown" showlargeimage="False" caption="标记色" hint="标记色" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.GDLinEditor" type="dropdown" showlargeimage="False" caption="线条色" hint="线条色" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.GDRegEditor" type="dropdown" showlargeimage="False" caption="填充色" hint="填充色" begingroup="False" />
+                <item name="MapGIS.MapEditor.Plugin.GDTextEditor" type="dropdown" showlargeimage="False" caption="文本色" hint="文本色" begingroup="False" />
+              </item>
+            </ribbonpagegroup>
+            <ribbonpagegroup name="MapGIS.MapEditor.Plugin.RibbonPageGroupQuickMapEdit" text="一键成图" showcaptionbutton="False" clickkey="">
+              <item name="MapGIS.MapEditor.Plugin.CmdRectQuickMap" type="command" showlargeimage="False" caption="框选成图" hint="框选一键成图" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.CmdPolygonQuickMap" type="command" showlargeimage="False" caption="多边形成图" hint="多边形选择一键成图" begingroup="False" />
+              <item name="MapGIS.MapEditor.Plugin.CmdWholeRangeQuickMap" type="command" showlargeimage="False" caption="全图成图" hint="整图范围一键成图" begingroup="False" />
+            </ribbonpagegroup>
+          </ribbonpage>
+        </ribbonpagecategory>
+      </ribbonpagecategories>
+      <ribbonapplicationmenu>
+        <bottombuttons />
+      </ribbonapplicationmenu>
+      <ribbonpageheader />
+      <quickaccesstoolbar>
+      </quickaccesstoolbar>
+    </ribboncontrol>
+    <dockwindows>
+      <dockwindow name="MapGIS.GDBManager.Plugin.DWGDBCatalog" text="GDBCatalog" floatsize="{Width=200, Height=200}" floatvertical="True" dockvertical="Default" visibility="AutoHide" floatlocation="{X=0,Y=0}" dock="Right" xtrabounds="{X=0,Y=0,Width=200,Height=453}" originalsize="{Width=200, Height=200}" index="-1" state="active" />
+      <dockwindow name="MapGIS.ToolBox.Plugin.MapGISToolBoxDockWindow" text="工具箱" floatsize="{Width=200, Height=200}" floatvertical="True" dockvertical="Default" visibility="AutoHide" floatlocation="{X=0,Y=0}" dock="Right" xtrabounds="{X=0,Y=0,Width=200,Height=453}" originalsize="{Width=200, Height=200}" index="-1" state="active" />
+      <dockwindow name="MapGIS.WorkSpace.Plugin.DwWorkSpace" text="工作空间" floatsize="{Width=200, Height=200}" floatvertical="False" dockvertical="Default" visibility="Visible" floatlocation="{X=0,Y=0}" dock="Left" xtrabounds="{X=0,Y=219,Width=200,Height=453}" originalsize="{Width=200, Height=200}" index="0" state="active" />
+    </dockwindows>
+    <contentsviews istabbedmdi="True">
+      <item name="MapGIS.GDBManager.Plugin.CVContentView" text="内容视窗" isselectedpage="False" />
+    </contentsviews>
+    <statusbars>
+      <statusbar name="MapGIS.WorkSpace.Plugin.StatusBarUsual" isdefaultstatusbar="False" attachcontentsviewkey="MapGIS.WorkSpace.Plugin.MapView" caption="状态栏">
+        <item name="MapGIS.WorkSpace.Plugin.SBlank" type="static" caption="" begingroup="False" visible="True" alignment="Left" paintstyle="Standard" />
+        <item name="MapGIS.WorkSpace.Plugin.SProgress" type="progress" caption="进度条" begingroup="False" visible="True" alignment="Left" paintstyle="Standard" />
+        <item name="MapGIS.WorkSpace.Plugin.SPosition" type="static" caption="当前位置" begingroup="False" visible="True" alignment="Right" paintstyle="Standard" />
+      </statusbar>
+      <statusbar name="MapGIS.WorkSpace.Plugin.StatusBarForScene" isdefaultstatusbar="False" attachcontentsviewkey="MapGIS.WorkSpace.Plugin.SceneView" caption="场景状态栏">
+        <item name="MapGIS.WorkSpace.Plugin.SBlank" type="static" caption="" begingroup="False" visible="True" alignment="Left" paintstyle="Standard" />
+        <item name="MapGIS.WorkSpace.Plugin.SProgress" type="progress" caption="" begingroup="False" visible="True" alignment="Left" paintstyle="Standard" />
+      </statusbar>
+    </statusbars>
+    <disableplugins value="">
+    </disableplugins>
+  </application>
+  <package icon="">
+    <filelist>
+      <file path=".\MapGIS.ToolBox.dll" ifpackage="true" />
+      <file path=".\ToolBox\MapGIS.ToolBox.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.WorkSpace.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.GDBManager.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.MapEditor.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.MapTile.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.DataConvert.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.RasterEditor.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\FuseModel.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.MGISDataTrans.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\GeoGISPlugin.dll" ifpackage="true" />
+      <file path=".\plugin\GeoGIS.HexMapPlugin.dll" ifpackage="true" />
+      <file path=".\plugin\PathSearch.dll" ifpackage="true" />
+      <file path=".\plugin\GeoGIS.H3Net.dll" ifpackage="true" />
+      <file path=".\Package\MapGIS.TDEEditor.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\Test1.dll" ifpackage="true" />
+      <file path=".\plugin\MapGIS.DemAnalysis.Plugin.dll" ifpackage="true" />
+      <file path=".\plugin\PathPlanning.dll" ifpackage="true" />
+    </filelist>
+  </package>
+  <toolbox>
+    <flowtool>4,栅格旋转;2,小波正变换;3,小波逆变换;5,低通滤波;7,带通滤波;6,高通滤波;8,带阻滤波</flowtool>
+    <scripttool>附加数据库(MapGISLocal);创建数据库(MapGISLocal);矢量类清空;矢量类删除;矢量类重命名;矢量类属性结构设置...;矢量类创建;要素数据集创建;要素数据集重命名;要素数据集删除;网络类重命名;网络类删除;地图集重命名;地图集删除;地图集创建;栅格目录创建;栅格目录追加数据集;栅格目录追加数据集(可重命名）;栅格目录重命名;栅格目录删除;栅格数据集创建;栅格数据集重命名;栅格数据集删除;空间索引管理(本地数据);空间索引管理(非本地数据);属性索引创建(非本地数据);属性索引删除(非本地数据);创建图幅索引(存在图幅号);创建图幅索引(仅存在分幅数据);创建图幅索引(指定分幅比例);创建图幅索引(指定分幅矩形);创建空间索引（仅限PG数据源）;创建聚集索引;提取要素;删除要素;整图变换;属性汇总;6x数据导入;表格数据导入;外部数据导入;GDB数据拷贝;导出6x数据;导出表格数据;导出外部数据(简单要素类);导出外部数据(注记类);导出外部数据(栅格数据集);GDB数据整库拷贝;HDF-HDB升级工具;裁剪分析;缓冲区分析;叠加分析;生成泰森多边形;单点投影;矢量类投影;栅格投影;地理转换参数设置;制作瓦片裁剪参数文件;瓦片裁剪;用地图更新瓦片;用瓦片更新瓦片;旧瓦片升级;瓦片合并;MapGIS切片转ArcGIS紧凑型切片;瓦片参照系设置;瓦片提取;瓦片黑图检查;ArcGIS切片转MapGIS瓦片;建立金字塔;删除金字塔;创建栅格VAT;编辑VAT结构;无效值获取;无效值设置;多源影像融合(所有波段方式);多源影像融合(RGB波段方式);栅格裁剪;函数生成规则网;栅格数据更新;指定值掩膜;导入影像掩膜;导入AOI区掩膜;导入矢量区掩膜;栅格范围修改;栅格边界追踪;自然色处理;直方图匹配;去相关拉伸;薄云去除;坏线去除;获取栅格统计信息;栅格镶嵌;地形因子分析;山脊线提取;格网立体图绘制(正轴测透视投影);格网立体图绘制(双灭点透视投影);简单淹没分析;水漫淹没分析;晕渲图输出;重要点提取;ISODATA分类;最小距离分类;广义距离分类;平行六面体分类;ART神经网络分类;FuzzyART神经网络分类;Kohonen神经网络分类;监督最小距离分类;监督广义距离分类;监督平行六面体分类;最大似然法;BP神经网络分类;LVQ2神经网络分类;RBF神经网络分类;高阶神经网络分类;混合像元分解;聚类统计;过滤分析;去除分析;精度评价(AOI区法);精度评价(抽样点法);小区合并处理;面积统计;自动生成图例;差分法变化检测;变化向量分析;分类后变化检测;FFT变换;FFT逆变换;三维模型导入;线生成管状面;线生成水平面;线生成竖面;线生成管状体;区生成封闭面;区生成水平面;区生成竖面;区生成体;深度光滑算法;HC拉普拉斯算法;不进行面修正的拉普拉斯算法;拉普拉斯平滑算法;尺度依赖拉普拉斯算法;Taubin平滑;两步平滑算法;蝴蝶细分算法;Catmull-Clark细分算法;Loop细分算法;中点细分算法;LS3细分算法;化简处理;K9文档升级;检测参照系;检测图层系统库;更改地图文档数据源名;配置地图文档数据源;数据量统计;版面输出图片;生成缩略图;test;快显小助手</scripttool>
+  </toolbox>
+</dcprj>
